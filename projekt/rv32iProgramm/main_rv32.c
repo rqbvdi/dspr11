@@ -53,16 +53,16 @@ void main(void) {
    printf("\r\nRISC-V Prozessor der\n\rHumboldt Universitaet zu Berlin\r\n");
 
 //toDo
-    for (int i = 0; i < 64; i++) {
+        for (int i = 0; i < 64; i++) {
         if (i % 8 == 0) {
             if (i != 0) printf("\n");
             printf(" | ");
         }
 
-        fpt a0 = raw2fpt(tof[i * 4 + 0]);
-        fpt a1 = raw2fpt(tof[i * 4 + 1]);
-        fpt a2 = raw2fpt(tof[i * 4 + 2]);
-        fpt a3 = raw2fpt(tof[i * 4 + 3]);
+        fpt a0 = hex2fpt(tof[i * 4 + 0]);
+        fpt a1 = hex2fpt(tof[i * 4 + 1]);
+        fpt a2 = hex2fpt(tof[i * 4 + 2]);
+        fpt a3 = hex2fpt(tof[i * 4 + 3]);
 
         fpt y = fpt_sub(a3, a1);  
         fpt x = fpt_sub(a2, a0);  
