@@ -59,10 +59,10 @@ void main(void) {
             printf(" | ");
         }
 
-        fpt a0 = hex2fpt(tof[i * 4 + 0]);
-        fpt a1 = hex2fpt(tof[i * 4 + 1]);
-        fpt a2 = hex2fpt(tof[i * 4 + 2]);
-        fpt a3 = hex2fpt(tof[i * 4 + 3]);
+        fpt a0 = (fpt)(tof[i * 4 + 0]);
+        fpt a1 = (fpt)(tof[i * 4 + 1]);
+        fpt a2 = (fpt)(tof[i * 4 + 2]);
+        fpt a3 = (fpt)(tof[i * 4 + 3]);
 
         fpt y = fpt_sub(a3, a1);  
         fpt x = fpt_sub(a2, a0);  
